@@ -3,6 +3,7 @@ let clickBtn = $('.clickBtn');
 let task1 = $('#task1');
 let task2 = $('#task2');
 
+
 let timeNow = moment().format('MMMM Do YYYY, h:mm a')
 $(function(){
     currentTime.html(timeNow);
@@ -16,9 +17,12 @@ $(function(){
         let userInput2 = task2.val();
         localStorage.setItem("task2", userInput2);
 
-        
-
     })
+
+    savedTask1 = localStorage.getItem("task1");
+    console.log(savedTask1);
+    task1.val(savedTask1);
+
 
 
 })

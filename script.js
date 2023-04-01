@@ -1,5 +1,6 @@
 let currentTime = $("#currentDay");
 let clickBtn = $('.clickBtn');
+let clickBtn2 = $('.clickBtn');
 let task1 = $('#task1');
 let task2 = $('#task2');
 
@@ -14,6 +15,13 @@ $(function(){
         let userInput = task1.val();
         localStorage.setItem("task1", userInput);
 
+        // let userInput2 = task2.val();
+        // localStorage.setItem("task2", userInput2);
+
+    })
+    clickBtn2.on('click',  function(){
+        console.log('Save button 2 was clicked.')
+        //now save info from input text field to local storage
         let userInput2 = task2.val();
         localStorage.setItem("task2", userInput2);
 
@@ -22,6 +30,13 @@ $(function(){
     savedTask1 = localStorage.getItem("task1");
     console.log(savedTask1);
     task1.val(savedTask1);
+
+    savedTask2 = localStorage.getItem("task2");
+    console.log(savedTask2);
+    task2.val(savedTask2);
+
+
+
 
 
 

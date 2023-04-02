@@ -28,32 +28,48 @@
       <p id="currentDay" class="lead"></p>
     </header>
 
-      <div class="container ">
+      <div class="container  ">
 
-        <div class="row hour-9 ">
+        <div class="row" data-hour="hour-9">
           <div class="col-2 hour">
             9AM
           </div>
+
           <div class="col-8 ">
             <label for="task"></label>
-            <input type="text" id="task1" name="task">
+            <input type="text" id="task1" class="task" name="task">
+          </div>
+
+          <div class="col-2 saveBtn">
+            <button type="button" class="btn clickBtn">Save</button>
+          </div>
+        </div>
+
+
+        <div class="row" data-hour="hour-10">
+          <div class="col-2 hour">
+            10AM
+          </div>
+          <div class="col-8 ">
+            <label for="task"></label>
+            <input type="text" id="task2" class="task" name="task">
+
           </div>
           <div class="col-2 saveBtn">
             <button type="button" class="btn clickBtn">Save</button>
           </div>
         </div>
 
-        <div class="row hour-10">
+        <div class="row" id="hour-11">
           <div class="col-2 hour">
-            10AM
+            11AM
           </div>
           <div class="col-8 ">
             <label for="task"></label>
-            <input type="text" id="task2" name="task">
-
+            <input type="text" id="task3" class="task" name="task">
           </div>
           <div class="col-2 saveBtn">
-            <button type="button" class="btn clickBtn2">Save</button>
+            <button type="button" class="btn clickBtn">Save</button>
           </div>
         </div>
       

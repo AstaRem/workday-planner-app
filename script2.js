@@ -1,7 +1,7 @@
 let currentTime = $("#currentDay");
 let clickBtns = [$('.clickBtn1'), $('.clickBtn2'), $('.clickBtn3')];
 let tasks = [$('#task1'), $('#task2'), $('#task3')];
-let hours = [$('#8AM'), $('#9AM'), $('#10AM'), $('#11AM') ];
+let hours = [$('#9AM'), $('#10AM'), $('#11AM') ];
 
 
 
@@ -15,11 +15,11 @@ $(function() {
         console.log(singleHourText);
         console.log(singleConverted);
         if(hourNow == singleConverted){
-            hours[h].css("background-color", "orange")
+            hours[h].parent().addClass("present");
         } else if(hourNow < singleConverted){
-            hours[h].parent().css("background-color", "green")
+            hours[h].parent().addClass("future")
         } else {
-            hours[h].css("background-color", "grey")
+            hours[h].parent().addClass("past")
         }
 
     }

@@ -13,7 +13,7 @@ $(function() {
         let singleHourText = hours[h].text();
         // let convertedTime = moment("01:00 PM", 'hh:mm A').format('HH:mm')
 
-        let singleConverted = moment(singleHourText, 'HH:mm A').format('HH:mm');
+        let singleConverted = moment(singleHourText, 'HH A').format('HH');
         console.log(`Text: ${singleHourText}, converted Hour: ${singleConverted}`);
         console.log(singleConverted);
         if(hourNow == singleConverted){

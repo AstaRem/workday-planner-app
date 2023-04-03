@@ -12,11 +12,12 @@ $(function() {
   for (let i = 0; i < clickBtns.length; i++) {
     clickBtns[i].click(function() {
       console.log(`Save button ${i+1} was clicked.`);
-
+    //saves user input to local storage
       let userInput = tasks[i].val();
       localStorage.setItem(`task${i+1}`, userInput);
     });
 
+    //now continues displaying user input even when the page is reloaded
     let savedTask = localStorage.getItem(`task${i+1}`);
     console.log(savedTask);
     tasks[i].val(savedTask);

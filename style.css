@@ -63,7 +63,9 @@ input:focus{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
+  text-align: center;
+  padding-top: 10px;
 
 }
 

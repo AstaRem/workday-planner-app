@@ -1,7 +1,7 @@
 let currentTime = $("#currentDay");
 let clickBtns = [$('.clickBtn1'), $('.clickBtn2'), $('.clickBtn3'), $('.clickBtn4'), $('.clickBtn5'), $('.clickBtn6'), $('.clickBtn7'), $('.clickBtn8'), $('.clickBtn9') ];
 let tasks = [$('#task1'), $('#task2'), $('#task3'), $('#task4'), $('#task5'), $('#task6'), $('#task7'), $('#task8'), $('#task9') ];
-let hours = [$('#9AM'), $('#10AM'), $('#11AM'), $('#12PM'), $('#01PM'), $('#2PM'), $('#3PM'), $('#4PM'), $('#5PM') ];
+let hours = [$('#9AM'), $('#10AM'), $('#11AM'), $('#12PM'), $('#13PM'), $('#2PM'), $('#3PM'), $('#4PM'), $('#5PM') ];
 
 
 
@@ -11,14 +11,16 @@ let hourNow = moment().format('hh');
 $(function() {
     for(h = 0; h < hours.length; h++){
         let singleHourText = hours[h].text();
-        let singleConverted = moment(`${singleHourText}`, 'hh A').format('hh');
-        console.log(singleHourText);
+        // let convertedTime = moment("01:00 PM", 'hh:mm A').format('HH:mm')
+
+        let singleConverted = moment(singleHourText, 'HH:mm A').format('HH:mm');
+        console.log(`Text: ${singleHourText}, converted Hour: ${singleConverted}`);
         console.log(singleConverted);
         if(hourNow == singleConverted){
             hours[h].parent().addClass("present");
         } else if(hourNow < singleConverted){
             hours[h].parent().addClass("future")
-        } else {
+        } else if(hourNow > singleConverted) {
             hours[h].parent().addClass("past")
         }
 

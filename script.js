@@ -56,7 +56,3 @@ $(function(){
 
 })
 
-//get a single line time today
-//converts time to 24-hour format
-let convertedTime = moment("01:00 PM", 'hh:mm A').format('HH:mm')
-console.log(convertedTime);

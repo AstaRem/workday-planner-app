@@ -1,7 +1,7 @@
 let currentTime = $("#currentDay");
-let clickBtns = [$('.clickBtn1'), $('.clickBtn2'), $('.clickBtn3')];
-let tasks = [$('#task1'), $('#task2'), $('#task3')];
-let hours = [$('#9AM'), $('#10AM'), $('#11AM') ];
+let clickBtns = [$('.clickBtn1'), $('.clickBtn2'), $('.clickBtn3'), $('.clickBtn4'), $('.clickBtn5'), $('.clickBtn6'), $('.clickBtn7'), $('.clickBtn8'), $('.clickBtn9') ];
+let tasks = [$('#task1'), $('#task2'), $('#task3'), $('#task4'), $('#task5'), $('#task6'), $('#task7'), $('#task8'), $('#task9') ];
+let hours = [$('#9AM'), $('#10AM'), $('#11AM'), $('#12PM'), $('#01PM'), $('#2PM'), $('#3PM'), $('#4PM'), $('#5PM') ];
 
 
 

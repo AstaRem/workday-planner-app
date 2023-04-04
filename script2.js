@@ -11,7 +11,6 @@ let hourNow = moment().format('hh');
 $(function() {
     for(h = 0; h < hours.length; h++){
         let singleHourText = hours[h].text();
-        // let convertedTime = moment("01:00 PM", 'hh:mm A').format('HH:mm')
 
         let singleConverted = moment(singleHourText, 'HH A').format('HH');
         console.log(`Text: ${singleHourText}, converted Hour: ${singleConverted}`);
@@ -41,7 +40,6 @@ $(function() {
 
     //now continues displaying user input even when the page is reloaded
     let savedTask = localStorage.getItem(`task${i+1}`);
-    // console.log(savedTask);
     tasks[i].val(savedTask);
   }
 });
